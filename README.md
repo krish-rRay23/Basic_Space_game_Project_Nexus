@@ -19,26 +19,26 @@ To get started with Basic Space Game Project Nexus, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/Basic_Space_game_Project_Nexus.git
-Navigate to the project directory:
+2. Navigate to the project directory:
    ```
    cd Basic_Space_game_Project_Nexus
    ```
-Open the project in Godot Engine.
+3. Open the project in Godot Engine.
 
-Run the game from the Godot interface.
+4. Run the game from the Godot interface.
 
-Usage
+## Usage
 Players can navigate through the game using keyboard controls, customize their spaceships using the in-game UI, and manage resources collected during gameplay to improve their chances of survival.
 
-Contributing
+## Contributing
 Contributions are welcome! If you have suggestions for improvements or want to submit a bug fix, please create a pull request.
 
 For major changes, please open an issue first to discuss what you would like to change.
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgments
+## Acknowledgments
 Inspired by classic arcade games.
 Special thanks to the Godot community for the resources and support.
 For more information, visit the repository.
