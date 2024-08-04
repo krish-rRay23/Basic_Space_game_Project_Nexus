@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b10l13ue778gw"]
+[gd_scene load_steps=5 format=3 uid="uid://dbh6bhtm2fnxb"]
 
-[ext_resource type="FontFile" uid="uid://b836v1nwqtc5e" path="res://Assets/SpeedyRegular-7BLoE.ttf" id="1_quk02"]
+[ext_resource type="FontFile" uid="uid://bcxtdpes1ufig" path="res://Assets/SpeedyRegular-7BLoE.ttf" id="1_quk02"]
 [ext_resource type="Script" path="res://src/main-menu.gd" id="1_vkuwm"]
 [ext_resource type="VideoStream" path="res://Assets/background/background for main menu.ogv" id="2_4rotj"]
 
