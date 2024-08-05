@@ -1,6 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b10l13ue778gw"]
 
-[ext_resource type="FontFile" uid="uid://sh6iuwhox166" path="res://Assets/SpeedyRegular-7BLoE.ttf" id="1_quk02"]
 [ext_resource type="Script" path="res://src/main-menu.gd" id="1_vkuwm"]
 [ext_resource type="Texture2D" uid="uid://duxgoxwe5sfju" path="res://Assets/background/background for main menu.png" id="2_pw3q0"]
 [ext_resource type="Texture2D" uid="uid://nc8kla681pcn" path="res://Assets/buttons for main menu/start/START1.png" id="4_tluo2"]
