@@ -1,17 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbh6bhtm2fnxb"]
 
-[ext_resource type="FontFile" uid="uid://bcxtdpes1ufig" path="res://Assets/SpeedyRegular-7BLoE.ttf" id="1_quk02"]
 [ext_resource type="Script" path="res://src/main-menu.gd" id="1_vkuwm"]
-[ext_resource type="VideoStream" path="res://Assets/background/background for main menu.ogv" id="2_4rotj"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5ybm"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(1, 1, 1, 0.6)
-shadow_size = 10
+[ext_resource type="Texture2D" uid="uid://duxgoxwe5sfju" path="res://Assets/background/background for main menu.png" id="2_pw3q0"]
+[ext_resource type="Texture2D" uid="uid://nc8kla681pcn" path="res://Assets/buttons for main menu/start/START1.png" id="4_tluo2"]
+[ext_resource type="Texture2D" uid="uid://u2yprp4wpsx3" path="res://Assets/buttons for main menu/start/start3.png" id="5_k3lok"]
+[ext_resource type="Texture2D" uid="uid://ctk4dh7sblkq" path="res://Assets/buttons for main menu/start/start2.png" id="6_tdufv"]
+[ext_resource type="Texture2D" uid="uid://xbc6xp1vs25g" path="res://Assets/buttons for main menu/options/option1.png" id="7_8rqfc"]
+[ext_resource type="Texture2D" uid="uid://xut0gswo5nar" path="res://Assets/buttons for main menu/options/option3.png" id="8_p8tja"]
+[ext_resource type="Texture2D" uid="uid://cjbbqd7042hhk" path="res://Assets/buttons for main menu/options/option2.png" id="9_kvnl8"]
+[ext_resource type="Texture2D" uid="uid://bluc3s7364jlw" path="res://Assets/buttons for main menu/exit/exit1.png" id="10_bp8de"]
+[ext_resource type="Texture2D" uid="uid://bhedgva5go8cr" path="res://Assets/buttons for main menu/exit/exit3.png" id="11_ai00o"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -22,23 +19,25 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vkuwm")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -7.0
+offset_right = 3.0
+offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_4rotj")
-autoplay = true
-expand = true
+texture = ExtResource("2_pw3q0")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 371.0
-offset_top = 16.0
-offset_right = 830.0
-offset_bottom = 116.0
+offset_left = 428.0
+offset_top = 6.0
+offset_right = 914.0
+offset_bottom = 106.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 6
@@ -53,52 +52,39 @@ vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -172.0
-offset_top = -152.0
-offset_right = 220.0
-offset_bottom = 225.0
+anchor_bottom = 1.0
+offset_left = -223.0
+offset_top = -447.0
+offset_right = 223.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 27
+grow_vertical = 0
+theme_override_constants/separation = 32
+alignment = 1
 
-[node name="play game" type="Button" parent="VBoxContainer"]
+[node name="start game" type="TextureButton" parent="VBoxContainer"]
+layout_direction = 2
 layout_mode = 2
-size_flags_vertical = 7
-theme_override_fonts/font = ExtResource("1_quk02")
-theme_override_font_sizes/font_size = 34
-theme_override_styles/normal = SubResource("StyleBoxFlat_y5ybm")
-text = "play game "
+texture_normal = ExtResource("4_tluo2")
+texture_pressed = ExtResource("5_k3lok")
+texture_hover = ExtResource("6_tdufv")
+stretch_mode = 3
 
-[node name="options" type="Button" parent="VBoxContainer"]
+[node name="options" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 7
-theme_override_fonts/font = ExtResource("1_quk02")
-theme_override_font_sizes/font_size = 34
-theme_override_styles/normal = SubResource("StyleBoxFlat_y5ybm")
-text = "options "
+texture_normal = ExtResource("7_8rqfc")
+texture_pressed = ExtResource("8_p8tja")
+texture_hover = ExtResource("9_kvnl8")
 
-[node name="credits" type="Button" parent="VBoxContainer"]
+[node name="quit" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 7
-theme_override_fonts/font = ExtResource("1_quk02")
-theme_override_font_sizes/font_size = 34
-theme_override_styles/normal = SubResource("StyleBoxFlat_y5ybm")
-text = "credits"
+texture_normal = ExtResource("10_bp8de")
+texture_pressed = ExtResource("11_ai00o")
+texture_hover = ExtResource("11_ai00o")
 
-[node name="quit" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 7
-theme_override_fonts/font = ExtResource("1_quk02")
-theme_override_font_sizes/font_size = 34
-theme_override_styles/normal = SubResource("StyleBoxFlat_y5ybm")
-text = "Quit"
-
-[connection signal="pressed" from="VBoxContainer/play game" to="." method="_on_play_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/start game" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
