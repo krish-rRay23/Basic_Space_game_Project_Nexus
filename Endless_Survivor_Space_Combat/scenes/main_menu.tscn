@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://ckypxhgmej7vw"]
+
+[ext_resource type="Script" path="res://src/main_menu.gd" id="1_yqto0"]
+[ext_resource type="Texture2D" uid="uid://duxgoxwe5sfju" path="res://Assets/background/background for main menu.png" id="2_sp1t3"]
+[ext_resource type="Texture2D" uid="uid://nc8kla681pcn" path="res://Assets/buttons for main menu/start/START1.png" id="3_e7gkf"]
+[ext_resource type="Texture2D" uid="uid://ctk4dh7sblkq" path="res://Assets/buttons for main menu/start/start2.png" id="4_0dr33"]
+[ext_resource type="Texture2D" uid="uid://u2yprp4wpsx3" path="res://Assets/buttons for main menu/start/start3.png" id="5_tti60"]
+[ext_resource type="Texture2D" uid="uid://xbc6xp1vs25g" path="res://Assets/buttons for main menu/options/option1.png" id="6_miaun"]
+[ext_resource type="Texture2D" uid="uid://cjbbqd7042hhk" path="res://Assets/buttons for main menu/options/option2.png" id="7_8lq0j"]
+[ext_resource type="Texture2D" uid="uid://xut0gswo5nar" path="res://Assets/buttons for main menu/options/option3.png" id="8_pu16k"]
+[ext_resource type="Texture2D" uid="uid://dmeh0fyyxk8yn" path="res://Assets/buttons for main menu/exit/exit2.png" id="9_qcu7j"]
+[ext_resource type="Texture2D" uid="uid://bhedgva5go8cr" path="res://Assets/buttons for main menu/exit/exit3.png" id="10_e6mt3"]
+
+[sub_resource type="FontVariation" id="FontVariation_2yrab"]
+
+[node name="mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqto0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_sp1t3")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -122.0
+offset_right = 122.0
+offset_bottom = 57.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0.269965, 0.0742788, 0.582314, 1)
+theme_override_colors/font_outline_color = Color(0.354508, 0.0209297, 0.295375, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = -1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = SubResource("FontVariation_2yrab")
+theme_override_font_sizes/font_size = 64
+text = "MAIN MENU"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -160.0
+offset_right = 227.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 23
+
+[node name="start game" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_e7gkf")
+texture_pressed = ExtResource("4_0dr33")
+texture_hover = ExtResource("5_tti60")
+
+[node name="options" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_miaun")
+texture_pressed = ExtResource("7_8lq0j")
+texture_hover = ExtResource("8_pu16k")
+
+[node name="quit" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_miaun")
+texture_pressed = ExtResource("9_qcu7j")
+texture_hover = ExtResource("10_e6mt3")
+
+[connection signal="pressed" from="VBoxContainer/start game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
