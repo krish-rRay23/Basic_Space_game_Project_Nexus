@@ -1,0 +1,43 @@
+extends CharacterBody2D
+
+# Speed of the spaceship
+var speed = 200
+# Rotation speed of the spaceship
+var rotation_speed = 1
+# Fuel level of the spaceship
+var fuel = 100  # Start with full fuel
+
+func _ready():
+	# Initialize the spaceship's starting rotation
+	rotation = 0
+
+func _process(delta):
+	# If fuel is available, allow movement and rotation
+	if fuel > 0:
+		# Input handling for rotation
+		if Input.is_action_pressed("ui_left"):
+			rotation -= rotation_speed * delta
+		if Input.is_action_pressed("ui_right"):
+			rotation += rotation_speed * delta
+
+		# Input handling for movement
+		var move_vector = Vector2.ZERO
+		
+		if Input.is_action_pressed("ui_up"):
+			move_vector = Vector2(0, -1) # Forward direction in local space
+			fuel -= 1 * delta  # Decrease fuel when moving forward
+		if Input.is_action_pressed("ui_down"):
+			move_vector = Vector2(0, 1) # Backward direction in local space
+			fuel -= 1 * delta  # Decrease fuel when moving backward
+
+		# Rotate the move_vector to match the spaceship's orientation
+		move_vector = move_vector.rotated(rotation)
+		
+		# Move the spaceship
+		position += move_vector * speed * delta
+
+	# Ensure fuel doesn't go negative
+	fuel = max(fuel, 0)
+
+	# Optional: Update a label or UI element to display the fuel level
+	$Label.text = "Fuel Remaining " + str(int(fuel))
