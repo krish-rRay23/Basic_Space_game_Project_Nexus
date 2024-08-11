@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://digpfs1fgn37p"]
+[gd_scene load_steps=4 format=3 uid="uid://digpfs1fgn37p"]
 
 [ext_resource type="Script" path="res://src/game.gd" id="1_y1v7m"]
 [ext_resource type="PackedScene" uid="uid://bi2h0qxe4yd16" path="res://scenes/player.tscn" id="2_f0jlo"]
+[ext_resource type="PackedScene" uid="uid://cn7k6oo2cksre" path="res://scenes/FuelBar.tscn" id="3_tiru5"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_y1v7m")
 
 [node name="Player" parent="." instance=ExtResource("2_f0jlo")]
-position = Vector2(588, 338)
+position = Vector2(570, 331)
 
 [node name="Lasers" type="Node2D" parent="."]
+
+[node name="FuelBar" parent="." instance=ExtResource("3_tiru5")]
+visible = false

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bi2h0qxe4yd16"]
+[gd_scene load_steps=5 format=3 uid="uid://bi2h0qxe4yd16"]
 
 [ext_resource type="Script" path="res://src/player.gd" id="1_18i4w"]
 [ext_resource type="Texture2D" uid="uid://dlf0w2cxqs72q" path="res://Assets/Sprites/Layer 1.png" id="2_2iqo0"]
+[ext_resource type="PackedScene" uid="uid://cn7k6oo2cksre" path="res://scenes/FuelBar.tscn" id="3_wddkq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_881qa"]
 radius = 107.28
@@ -24,3 +25,11 @@ shape = SubResource("CircleShape2D_881qa")
 
 [node name="Muzzle" type="Node2D" parent="."]
 position = Vector2(2.5, -160)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FuelBar" parent="CanvasLayer" instance=ExtResource("3_wddkq")]
+offset_left = 986.0
+offset_top = 31.0
+offset_right = 1246.0
+offset_bottom = 57.0
