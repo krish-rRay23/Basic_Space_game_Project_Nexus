@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://nc8kla681pcn" path="res://Assets/buttons for main menu/start/START1.png" id="3_e7gkf"]
 [ext_resource type="Texture2D" uid="uid://ctk4dh7sblkq" path="res://Assets/buttons for main menu/start/start2.png" id="4_0dr33"]
 [ext_resource type="Texture2D" uid="uid://u2yprp4wpsx3" path="res://Assets/buttons for main menu/start/start3.png" id="5_tti60"]
-[ext_resource type="Texture2D" uid="uid://xbc6xp1vs25g" path="res://Assets/buttons for main menu/options/option1.png" id="6_miaun"]
 [ext_resource type="Texture2D" uid="uid://cjbbqd7042hhk" path="res://Assets/buttons for main menu/options/option2.png" id="7_8lq0j"]
 [ext_resource type="Texture2D" uid="uid://xut0gswo5nar" path="res://Assets/buttons for main menu/options/option3.png" id="8_pu16k"]
+[ext_resource type="Texture2D" uid="uid://bluc3s7364jlw" path="res://Assets/buttons for main menu/exit/exit1.png" id="8_s6u8s"]
 [ext_resource type="Texture2D" uid="uid://dmeh0fyyxk8yn" path="res://Assets/buttons for main menu/exit/exit2.png" id="9_qcu7j"]
 [ext_resource type="Texture2D" uid="uid://bhedgva5go8cr" path="res://Assets/buttons for main menu/exit/exit3.png" id="10_e6mt3"]
 
@@ -74,13 +74,13 @@ texture_hover = ExtResource("5_tti60")
 
 [node name="options" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("6_miaun")
+texture_normal = ExtResource("7_8lq0j")
 texture_pressed = ExtResource("7_8lq0j")
 texture_hover = ExtResource("8_pu16k")
 
 [node name="quit" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("6_miaun")
+texture_normal = ExtResource("8_s6u8s")
 texture_pressed = ExtResource("9_qcu7j")
 texture_hover = ExtResource("10_e6mt3")
 

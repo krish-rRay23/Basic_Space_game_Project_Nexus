@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5rdwbth8rtp8"
-path="res://.godot/imported/WhatsApp Image 2024-08-02 at 22.51.19_fb835392.jpg-faa142c9eba274b6278ce17f3f52f288.ctex"
+uid="uid://c5505jnm0bwsy"
+path="res://.godot/imported/5.png-c170654ad52985a68184036310f697f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WhatsApp Image 2024-08-02 at 22.51.19_fb835392.jpg"
-dest_files=["res://.godot/imported/WhatsApp Image 2024-08-02 at 22.51.19_fb835392.jpg-faa142c9eba274b6278ce17f3f52f288.ctex"]
+source_file="res://Assets/spaceships/5.png"
+dest_files=["res://.godot/imported/5.png-c170654ad52985a68184036310f697f1.ctex"]
 
 [params]
 

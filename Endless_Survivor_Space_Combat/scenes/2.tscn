@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctymbddvcuxa6"]
+[gd_scene load_steps=3 format=3 uid="uid://ctymbddvcuxa6"]
 
-[ext_resource type="Texture2D" uid="uid://dbsvxbktrqjsx" path="res://spaceships/2.png" id="1_klfo8"]
-[ext_resource type="Script" path="res://2.gd" id="1_r1wmr"]
-[ext_resource type="Texture2D" uid="uid://c5rdwbth8rtp8" path="res://WhatsApp Image 2024-08-02 at 22.51.19_fb835392.jpg" id="2_t2j7v"]
+[ext_resource type="Texture2D" uid="uid://dbsvxbktrqjsx" path="res://Assets/spaceships/2.png" id="1_klfo8"]
+[ext_resource type="Script" path="res://src/2.gd" id="1_r1wmr"]
 
 [node name="scene3" type="Node2D"]
 script = ExtResource("1_r1wmr")
@@ -10,7 +9,6 @@ script = ExtResource("1_r1wmr")
 [node name="WhatsAppImage2024-08-02At22_51_19Fb835392" type="Sprite2D" parent="."]
 position = Vector2(878, 464)
 scale = Vector2(2.86301, 2.37751)
-texture = ExtResource("2_t2j7v")
 
 [node name="2" type="Sprite2D" parent="."]
 position = Vector2(588, 336)
