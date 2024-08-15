@@ -29,11 +29,8 @@ To get started with Basic Space Game Project Nexus:
 
 1.  Navigate to the project directory:
 
-    bash
-
-    Copy
-
-    `cd Basic_Space_game_Project_Nexus`
+    ```bash
+    cd Basic_Space_game_Project_Nexus`
 
 2.  Open the project in Godot Engine (version 3.5 or later).
 3.  Run the game from the Godot interface.
