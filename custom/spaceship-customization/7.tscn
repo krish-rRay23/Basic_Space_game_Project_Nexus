@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://coxamrg30alfr"]
+
+[ext_resource type="Script" path="res://7.gd" id="1_2s1of"]
+[ext_resource type="Texture2D" uid="uid://b4qmnsnc4gd0f" path="res://spaceships/7.png" id="1_p832a"]
+[ext_resource type="Texture2D" uid="uid://c5rdwbth8rtp8" path="res://WhatsApp Image 2024-08-02 at 22.51.19_fb835392.jpg" id="2_weaxx"]
+
+[node name="scene8" type="Node2D"]
+script = ExtResource("1_2s1of")
+
+[node name="WhatsAppImage2024-08-02At22_51_19Fb835392" type="Sprite2D" parent="."]
+position = Vector2(827, 497)
+scale = Vector2(2.4, 2.16466)
+texture = ExtResource("2_weaxx")
+
+[node name="7" type="Sprite2D" parent="."]
+position = Vector2(573, 337)
+texture = ExtResource("1_p832a")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 46.0
+offset_top = 321.0
+offset_right = 222.0
+offset_bottom = 403.0
+text = "<-Prev"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 980.0
+offset_top = 315.0
+offset_right = 1134.0
+offset_bottom = 401.0
+text = "Next->"
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
